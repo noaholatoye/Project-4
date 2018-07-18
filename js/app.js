@@ -10,7 +10,7 @@
 
     });
 
-    // Embed tittle to image 
+    // Add caption to image 
 
     const atr = $('img');
     let div = $('<div>').addClass('desc');
@@ -24,17 +24,6 @@
 
 
 
-// const atr = $('img');
-// let div = $("<div>").addClass('olo');
-
-//   $('.gallery').append(div); 
-
-// const $text = $('.olo');   
-
-//   for(let i = 0; i < atr.length; i++) {
-//     let getAtr = atr[i].getAttribute('alt');
-//       $($text[i]).html(getAtr);
-//     }
 
 
 function myFunction() {
