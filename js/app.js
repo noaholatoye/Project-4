@@ -6,22 +6,21 @@ lightbox.option({
   })
 
 
+  // Declare variables
 var myInput, filter, img, alt, a;
 input = document.getElementById('myInput');
 image = document.getElementsByTagName('img');
 alt = document.querySelectorAll('[alt]');
-a = document.getElementsByTagName('a.attributes');
 
-console.log(a);
-
+console.log(image);
 
 // Loop through all list items, and hide those who don't match the search query
 input.addEventListener('input', () => {
 
-    for (i = 0; i < a.length; i++) {
-        if(title[i].includes(input.value)){
-            console.log(image);
-            a[i].style.display = "block";
+    for (i = 0; i < image.length; i++) {
+        if(image[i].alt.toUpperCase() === input.value.toUpperCase()){
+            image[i].style.display = "block";
+            console.log("Shown -->", image[i])
         } else if(input.value == ""){
             for (i = 0; i < image.length; i++) {
                 image[i].style.display = "block";
@@ -36,22 +35,21 @@ input.addEventListener('input', () => {
 
 
 
-  // Declare variables
+
+// Declare variables
 // var myInput, filter, img, alt, a;
 // input = document.getElementById('myInput');
 // image = document.getElementsByTagName('img');
 // alt = document.querySelectorAll('[alt]');
+// a = document.getElementsByTagName('a.attributes');
 
-// console.log(image);
-
-
-// // Loop through all list items, and hide those who don't match the search query
+// Loop through all list items, and hide those who don't match the search query
 // input.addEventListener('input', () => {
 
-//     for (i = 0; i < image.length; i++) {
-//         if(image[i].alt.toUpperCase() === input.value.toUpperCase()){
-//             image[i].style.display = "block";
-//             console.log("Shown -->", image[i])
+//     for (i = 0; i < a.length; i++) {
+//         if(title[i].includes(input.value)){
+//             console.log(image);
+//             a[i].style.display = "block";
 //         } else if(input.value == ""){
 //             for (i = 0; i < image.length; i++) {
 //                 image[i].style.display = "block";
@@ -61,5 +59,3 @@ input.addEventListener('input', () => {
 //             console.log("Hidden -->", image[i])
 //         }
 // }});
-
-
